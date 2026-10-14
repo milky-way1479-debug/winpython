@@ -73,6 +73,8 @@ jobs:
           retention-days: 66  # keeps artifact for 66 days
 
   upload_pypi_test:
+    # Disabled in this fork: package uploads are not authorized.
+    if: ${{ false }}
     name: Upload to PyPI (test)
     needs: [build_wheels]
     runs-on: ubuntu-24.04
